@@ -16,11 +16,11 @@ struct lista{
 }typedef Lista;
 
 //global vars
-Lista *li;
+
 
 //functions prototype
 Lista* cria_lista();
-void libera_lista(Lista* li);
+Lista* libera_lista(Lista* li);
 int tamanho_lista(Lista* li);
 int lista_cheia(Lista* li);
 int lista_vazia(Lista* li);

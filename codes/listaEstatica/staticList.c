@@ -10,8 +10,10 @@ Lista* cria_lista(){
 	return li;
 }
 
-void libera_lista(Lista* li){
+Lista * libera_lista(Lista* li){
 	free(li);
+	li = NULL;
+	return li;
 }
 
 int tamanho_lista(Lista* li){
@@ -57,6 +59,7 @@ void imprime_lista(Lista* li){
     if(li == NULL)
         return;
     int i;
+    printf("-------------------------------\n");
     for(i=0; i< li->qtd; i++){
         printf("Matricula: %d\n",li->dados[i].matricula);
         printf("Nome: %s\n",li->dados[i].nome);
