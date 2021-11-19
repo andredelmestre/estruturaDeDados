@@ -39,6 +39,6 @@ Website at [https://andredelmestre.com.br/](https://andredelmestre.com.br/)
 
 E-mail at [andremartins@ifsul.edu.br](andremartins@ifsul.edu.br)
 
-## Support
+## Related Work
 
 Este material foi modificado a partir do material do Prof. André Beckes, criador do [portal](https://programacaodescomplicada.wordpress.com/) e [canal de YouTube](https://www.youtube.com/user/progdescomplicada/featured) Programação Descomplicada.
