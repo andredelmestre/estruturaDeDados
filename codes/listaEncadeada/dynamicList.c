@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include "dynamicList.h"
 
+void limpa(){
+    getchar();
+    system("cls|clear");
+}
+
 Lista* cria_lista(){
     Lista* li = (Lista*) malloc(sizeof(Lista));
     if(li != NULL)
@@ -46,6 +51,19 @@ int lista_vazia(Lista* li){
     return 0;
 }
 
+int remove_lista_inicio(Lista* li){
+    if(li == NULL)
+        return 0;
+    if(lista_vazia(li))
+        return 0;
+    Elemento *nodo = *li;
+    *li = nodo->prox;
+    free(nodo);
+    return 1;
+}
+
+
+
 int insere_lista_inicio(Lista* li, Aluno al){
     if(li == NULL) //existe?
         return 0;
@@ -59,17 +77,11 @@ int insere_lista_inicio(Lista* li, Aluno al){
     return 1;
 }
 
-int remove_lista_inicio(Lista* li){
-    if(li == NULL)
-        return 0;
-    if(lista_vazia(li))
-        return 0;
 
-    Elemento *nodo = *li;
-    *li = nodo->prox;
-    free(nodo);
-    return 1;
-}
+
+
+
+
 
 void imprime_lista(Lista* li){
     if(lista_vazia(li) || li==NULL)

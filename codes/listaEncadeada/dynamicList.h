@@ -17,6 +17,7 @@ struct elemento{
 
 typedef Elemento* Lista;
 
+void limpa();
 
 //functions prototype
 Lista* cria_lista();
