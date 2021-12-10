@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "lib.h"
 int main(){
-    Aluno *al, a[4] = {{4,"Andre",9.5,7.8,8.5},
+    Aluno al, a[4] = {{4,"Andre",9.5,7.8,8.5},
                      {1,"Ricardo",7.5,8.7,6.8},
                      {3,"Bianca",9.7,6.7,8.4},
                      {2,"Ana",5.7,6.1,7.4}};
@@ -19,6 +19,9 @@ int main(){
         imprime_aluno(al);
     }
 
+    printf("\n\n\nIMPRIME PILHA\n\n");
+    imprime_Pilha(pi);
+
     for(i=0; i < 4; i++){
         pop(pi);
         al = top(pi);
@@ -27,8 +30,8 @@ int main(){
         // imprime_Pilha(pi);
     }
 
-    // printf("\n\n\nIMPRIME PILHA\n\n");
-    // imprime_Pilha(pi);
+    printf("\n\n\nIMPRIME PILHA\n\n");
+    imprime_Pilha(pi);
 
     freeStack(pi);
 

@@ -24,10 +24,11 @@ void freeStack(Pilha* pi){
     }
 }
 
-Aluno * top(Pilha* pi){
+Aluno top(Pilha* pi){
+    Aluno err = {-1,"",0.0,0.0,0.0};
     if(pi == NULL || isEmpty(pi))
-        return NULL;
-    return &pi->topo->dados;
+        return err;
+    return pi->topo->dados;
 }
 
 int push(Pilha* pi, Aluno al){
@@ -72,14 +73,14 @@ int isEmpty(Pilha* pi){
     return 0;
 }
 
-void imprime_aluno(Aluno* al){
-    if(al == NULL)
+void imprime_aluno(Aluno al){
+    if(al.matricula == -1)
         return;
-    printf("Matricula: %d\n",al->matricula);
-    printf("Nome: %s\n",al->nome);
-    printf("Notas: %f %f %f\n",al->n1,
-                               al->n2,
-                               al->rec);
+    printf("Matricula: %d\n",al.matricula);
+    printf("Nome: %s\n",al.nome);
+    printf("Notas: %f %f %f\n",al.n1,
+                               al.n2,
+                               al.rec);
         printf("-------------------------------\n");
 }
 
@@ -88,7 +89,7 @@ void imprime_Pilha(Pilha* pi){
         return;
     Elem* no = pi->topo;
     while(no != NULL){
-        imprime_aluno(&no->dados);
+        imprime_aluno(no->dados);
         no = no->prox;
     }
 }

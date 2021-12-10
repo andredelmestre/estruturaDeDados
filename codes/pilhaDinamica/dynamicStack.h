@@ -22,13 +22,13 @@ struct pilha{
 
 Pilha* newStack();
 void freeStack(Pilha* pi);
-Aluno * top(Pilha* pi);
+Aluno top(Pilha* pi);
 int push(Pilha* pi, Aluno al);
 int pop(Pilha* pi);
 int lenght(Pilha* pi);
 int isFull(Pilha* pi);
 int isEmpty(Pilha* pi);
-void imprime_aluno(Aluno* al);
+void imprime_aluno(Aluno al);
 void imprime_Pilha(Pilha* pi);
 
 #endif /* DYNAMICSTACK_H_INCLUDED */
