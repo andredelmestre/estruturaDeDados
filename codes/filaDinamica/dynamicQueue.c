@@ -96,9 +96,13 @@ void imprime_aluno(Aluno al){
 void imprime_Fila(Fila* fi){
     if(fi == NULL)
         return;
-    Elem* no = fi->inicio;
-    while(no != NULL){
-        imprime_aluno(no->dados);
-        no = no->prox;
+    int tam = tamanho_Fila(fi);
+    Aluno al;
+    while(tam){
+        al = consulta_Fila(fi);
+        imprime_aluno(al);
+        insere_Fila(fi, al);
+        remove_Fila(fi);
+        tam--;
     }
 }

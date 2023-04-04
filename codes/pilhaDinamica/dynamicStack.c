@@ -84,12 +84,15 @@ void imprime_aluno(Aluno al){
         printf("-------------------------------\n");
 }
 
+
 void imprime_Pilha(Pilha* pi){
     if(pi == NULL)
         return;
-    Elem* no = pi->topo;
-    while(no != NULL){
-        imprime_aluno(no->dados);
-        no = no->prox;
-    }
+    if(isEmpty(pi))
+        return;
+    Aluno al = top(pi);
+    pop(pi);
+    imprime_aluno(al);
+    imprime_Pilha(pi);
+    push(pi, al);
 }
